@@ -13,7 +13,7 @@ namespace lib\template;
 
 /**
  * TemplateVariable class
- * Stores a variable for a template
+ * Stores a defined variable for a template
  * @package lib\template
  * @author Tim Visee
  */
@@ -27,10 +27,12 @@ class TemplateVariable {
 
     /**
      * Constructor
-     * @param $name Variable name
+     * @param String $name Variable name
+     * @param mixed $val Variable value (optional)
      */
-    public function __construct($name) {
+    public function __construct($name, $val = null) {
         $this->name = $name;
+        $this->val = $val;
     }
 
     /**
